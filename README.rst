@@ -1,3 +1,13 @@
+bitflyerを利用して、ボリンジャーバンドで自動取引を行うツールです。
+計算式はいろいろなサイトを参考にしています。
+
+awsのlambda、dynamoDB、EventBridge、dynamoDB Streamをchalice CDKで作成しました。
+ローカルのテストは、vscodeのdevcontainerを使用して、Dockerで行えます。
+
+プロジェクトの説明にもある通り、
+業務でchaliceを利用することがあり、学習のために作成しているため、
+こちらは稼げる事を目的としていません。
+
 REST API backed by Amazon DynamoDB
 ==================================
 
