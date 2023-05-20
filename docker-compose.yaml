@@ -1,0 +1,28 @@
+version: "3"
+services:
+  auto_trade:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+      - ~/.gitconfig:/root/.gitconfig
+      - ~/.aws:/root/.aws
+      - ~/.ssh:/root/.ssh
+    networks:
+      - auto_trade_app
+    # 終了させない
+    command: /bin/sh -c "while sleep 1000; do :; done"
+  trade-dynamodb-local:
+    image: amazon/dynamodb-local:latest
+    container_name: trade_dynamodb_local
+    volumes:
+      - ./data:/data
+    ports:
+      - 8000:8000
+    command: -jar DynamoDBLocal.jar -port 8000 -dbPath /data -sharedDb
+    networks:
+      - auto_trade_app
+networks:
+  auto_trade_app:
+    driver: bridge

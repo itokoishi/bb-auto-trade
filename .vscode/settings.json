@@ -1,0 +1,12 @@
+{
+  "cSpell.words": ["iloc", "matplotlib", "pybitflyer", "pyplot"],
+  "python.testing.pytestArgs": ["tests"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.formatting.autopep8Args": ["--ignore=E501,E221,E203,W503,E701,E123"],
+  "flake8.args": ["--ignore=E501,E221,E203,W503,E701,E123"],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none"
+}

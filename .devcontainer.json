@@ -1,0 +1,33 @@
+{
+	"name": "auto_trade_devcontainer",
+	"remoteUser": "root",
+	"dockerComposeFile": [
+		"docker-compose.yaml"
+	],
+	"service": "auto_trade",
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"python.pythonPath": "/usr/local/bin/python",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": false,
+		"python.linting.flake8Enabled": true,
+		"python.linting.lintOnSave": true,
+		"python.formatting.provider": "autopep8",
+		"python.formatting.autopep8Args": ["--ignore=E501,E221,E203,W503,E701,E123"],
+		"flake8.args": ["--ignore=E501,E221,E203,W503,E701,E123"]
+	},
+	"extensions": [
+		"ms-python.python",
+		"ms-python.flake8",
+		"esbenp.prettier-vscode",
+		"mhutchie.git-graph",
+		"eamodio.gitlens",
+		"codezombiech.gitignore",
+		"xyz.local-history",
+		"donjayamanne.githistory",
+		"ms-python.vscode-pylance",
+		"cpmcgrath.codealignment-vscode"
+	],
+	"workspaceFolder": "/app",
+	"postCreateCommand": "pip install awscli --upgrade --user && pip install pybitflyer && pip install chalice && pip install boto3 && pip install autopep8 && pip install pytest && pip install requests && pip install pandas && pip install numpy && pip install flake8 && npm install -g aws-cdk && pip install 'chalice[cdk]' && pip install pytest-datadir"
+}

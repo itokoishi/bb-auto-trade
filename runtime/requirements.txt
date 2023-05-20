@@ -1,0 +1,5 @@
+boto3<2.0.0
+pybitflyer==0.1.9
+numpy
+pandas
+python-dotenv==1.0.0

@@ -1,0 +1,5 @@
+2023-05-07 22:11:46,979 - app.tests.test_auto_trade - INFO -     SK        PK  price   register_time
+2023-05-07 22:41:29,990 - app.tests.test_auto_trade - INFO - buy
+2023-05-07 22:53:36,431 - app.tests.test_auto_trade - INFO - {'child_order_acceptance_id': 'JRF20230507-225329-121438'}
+2023-05-07 22:55:30,895 - app.tests.test_auto_trade - INFO - {'status': -104, 'error_message': 'Enter the size in units of 0.000001 XRP.', 'data': None}
+2023-05-07 22:57:35,759 - app.tests.test_auto_trade - INFO - {'child_order_acceptance_id': 'JRF20230507-225725-224826'}
